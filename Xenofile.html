@@ -1,0 +1,694 @@
+<html>
+ <head>
+  <title>'.Write a Scientific Paper.'</title>
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+ </head>
+ <body>
+  <h1 align="center">Write a Scientific Paper</h1>
+  <h2 align="center">写科学论文</h2>
+  <h3 align="center">Jonathan D. Lettvin</h3>
+  <h3 align="center">Sep 07 2015</h3>
+  <hr /><table align="center" valign="top" border="0"width="80%"><tr><td align="left" valign="top">The <B>Xenofile</B> PHP library
+simplifies rapid development of draft quality scientific papers.
+A scientific paper is a standardized tool for
+communicating ideas, methods, and observations.
+This section, the abstract, summarizes major points.
+In later sections, the order and content of sections is standard.
+Citations, equations, figures, tables, listings, and appendices
+are given sequential labels which are used in the text.
+Standard visual cues are used to partition content effectively.
+Xenofile automates many tasks necessary to meet the requirements.
+Authors put less work into structure and focus more on content
+when using Xenofile.</td>
+</tr>
+</table>
+<h3>Section 1: Introduction(介紹) computer aided scientific paper writing</h3>
+<P>
+Definition of Xenophile:
+<i>One who has an interest in celebrating differences</i>.
+The Xenofile library harmonizes many different technologies and
+this paper is produced as a test of its features
+when the library is run in standalone mode.
+The goal is to simplify rapid development of scientific papers.
+Methods are implemented, documented, and illustrated.
+When included in another PHP script
+Xenofile is used to generate a paper using that script's content.
+</P><P>
+Note the section title.
+It has a sequence number, a keyword (with translation) and description.
+In the following section, note that the first subsection has
+a hierarchical sequence number.
+</P><h3>Section 2: Methods(套套) used for authoring a paper</h3>
+<h4>Section 2: gnuplot generates plots on-the-fly</h4>
+hello to the world
+<br clear="all"/><!-- drop rendering under this -->
+<table align="left"><tr><td align="center"><img src="Airy.gnuplot.png" width="256" height="256"/></td></tr><tr><td align="center" width="258">Airy and sinc function comparison\(\left(2\frac{J_1(u)}{u}\right)^2\)and \(\left(\frac{sin(u)}{u}\right)^2\)</td></tr></table><P>
+To the left is a figure produced by gnuplot
+(http://gnuplot.sourceforge.net) comparing
+diffractive blur with  the sinc function
+(sombrero function) with the same first zero.
+</P><P>
+Producing plots for use in a scientific paper
+is simplified with functions designed to accept
+gnuplot script language and then
+place the produced image on the page.
+</P><P>
+Advice: generate large cropped images with thick lines
+then specify smaller width and height for images in the paper
+to improve appearance of resulting plots.
+Also, note that legend (key) positioning and spacing
+requires adjustment to avoid overlap with lines and curves.
+
+</P><br clear="all"/><!-- drop rendering under this -->
+<h4>Section 2: Figures(人士) can be loaded from external files</h4>
+<br clear="all"/><!-- drop rendering under this -->
+<table align="left" border="1"><tr>
+<td align="center" valign="top">
+<div><img src="NoisyGrayStep.png"></div>
+<div align="center">Figure 1.1: me</div>
+</td>
+<td align="center" valign="top" width="258">
+<div><img src="Synchronic.png" width="256" height="320"></div>
+<div align="center">Figure 1.2: it</div>
+</td>
+</tr></table>
+<br clear="all"/><!-- drop rendering under this -->
+<table align="left" border="1"><tr>
+<td align="center" valign="top">
+<div><img src="NoisyGrayStep.png"></div>
+<div align="center">Figure 2: me</div>
+</td>
+</tr></table>
+<br clear="all"/><!-- drop rendering under this -->
+<br clear="all"/><!-- drop rendering under this -->
+<table align="left" border="1"><tr>
+<td align="center" valign="top">
+<div><img src="NoisyGrayStep.png"></div>
+<div align="center">Figure 3: me</div>
+</td>
+</tr></table>
+<br clear="all"/><!-- drop rendering under this -->
+
+
+
+<br clear="all"/><!-- drop rendering under this -->
+rCount 2: 
+2<br clear="all"/><!-- drop rendering under this -->
+rCount 4: 
+4<br clear="all"/><!-- drop rendering under this -->
+<h4>Section 2: Equations(方程式) can be formatted with TeX</h4>
+<br clear="all"/><!-- drop rendering under this -->
+<table width="100%" align="right" style="border-spacing: 5px"><tr><td align="center" width="70%">
+\(A=B\)</td><td align="right"><i>identity</i>
+</td><td align="right">[1]
+</td></tr></table>
+<br clear="all"/><!-- drop rendering under this -->
+<table width="100%" align="right" style="border-spacing: 5px"><tr><td align="center" width="70%">
+\(\frac{A}{B}\)</td><td align="right"><i>division</i>
+</td><td align="right">[2]
+</td></tr></table>
+<br clear="all"/><!-- drop rendering under this -->
+<h4>Section 2: Listings can be loaded from external files</h4>
+<table align="left" valign="top" border="1"width="100%"><tr><td align="left" valign="top"><pre>This is an example.</pre></td>
+</tr>
+<tr><td align="left" valign="top">Listing 1: A little</td>
+</tr>
+</table>
+
+<nobr>Listing<sup>1</sup></nobr><br clear="all"/><!-- drop rendering under this -->
+<table align="left" valign="top" border="1"width="100%"><tr><td align="left" valign="top"><pre>This is another example.</pre></td>
+</tr>
+<tr><td align="left" valign="top">Listing 2: B little</td>
+</tr>
+</table>
+
+<nobr>Listings<sup>1,2</sup></nobr>0
+foo2
+bar4
+\(I am boxed\)<h3>Appendix &#65;: Numbering(編號) Equations, Figures, Listings, Sections</h3>
+<P>
+Objects in a paper are numbered sequentially to identify
+the order in which they appear in the paper.
+They are numbered hierarchically to identify
+the section, subsection, or grouping to which they belong.
+Sections are typically identified by numbers such as "1. Introduction".
+Subsections may be numbered or may use letters such as "1.a Field of inquiry".
+Appendices are typically identified by letters such as "Appendix A".
+When subsections are deeply nested, different sequence types are used.
+For instance, subsubsections may use roman numerals.
+</P><P>
+This library provides resources for numbering in more than
+the traditional Arabic/English/Roman styles.
+The available styles are US/Arabic/Chinese/english/English/greek/Greek/Hindi/roman/Roman/Tibetan.
+These styles are selectable for an object type.
+For instance "[style='Aerg']" specifies that
+Arabic, lowercase-English, lowercase-Roman, Greek, and Hindi (Devangari)
+are used for hierarchy levels 1, 2, 3, and 4 respectively.
+For instance a 4 level title example for
+the seventh item at each level would be labelled "7.g.vii.&eta;".
+A 5 level title of all sevens with "[style='GRCEH']"
+(uppercase-Greek, uppercase-Roman, Chinese, uppercase-English, Hindi)
+would be "&#0919;.VII.&#x4e03;.G.&#x096d;".
+</P><table align="center" valign="top" border="1"width="50%"><caption>Examples of Numbering Styles</caption>
+<tr><th align="left" valign="top">STYLE</th>
+<th align="left" valign="top">REPRESENTATION</th>
+</tr>
+<tr><td align="left" valign="top">[style='AAAA']</td>
+<td align="left" valign="top">7.7.7.7</td>
+</tr>
+<tr><td align="left" valign="top">[style='Aerg']</td>
+<td align="left" valign="top">7.g.vii.&eta;</td>
+</tr>
+<tr><td align="left" valign="top">[style='GRCEH']</td>
+<td align="left" valign="top">&#0919;.VII.&#x4e03;.G.&#x096d;</td>
+</tr>
+</table>
+<br clear="all"/><!-- drop rendering under this -->
+<table border="1">
+<th>US
+<th>Arabic
+<th>Chinese
+<th>english
+<th>English
+<th>greek
+<th>Greek
+<th>Hindi
+<th>roman
+<th>Roman
+<th>Tibetan
+<tr>
+<td align="right">-10</td>
+<td align="right">-&#x00661;&#x00660;</td>
+<td align="right"></td>
+<td align="right">~&#106;</td>
+<td align="right">~&#74;</td>
+<td align="right">~&#954;</td>
+<td align="right">~&#922;</td>
+<td align="right">-&#x00967;&#x00966;</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">-&#x00f21;&#x00f20;</td>
+</tr>
+<tr>
+<td align="right">-9</td>
+<td align="right">-&#x00669;</td>
+<td align="right"></td>
+<td align="right">~&#105;</td>
+<td align="right">~&#73;</td>
+<td align="right">~&#953;</td>
+<td align="right">~&#921;</td>
+<td align="right">-&#x0096f;</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">-&#x00f29;</td>
+</tr>
+<tr>
+<td align="right">-8</td>
+<td align="right">-&#x00668;</td>
+<td align="right"></td>
+<td align="right">~&#104;</td>
+<td align="right">~&#72;</td>
+<td align="right">~&#952;</td>
+<td align="right">~&#920;</td>
+<td align="right">-&#x0096e;</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">-&#x00f28;</td>
+</tr>
+<tr>
+<td align="right">-7</td>
+<td align="right">-&#x00667;</td>
+<td align="right"></td>
+<td align="right">~&#103;</td>
+<td align="right">~&#71;</td>
+<td align="right">~&#951;</td>
+<td align="right">~&#919;</td>
+<td align="right">-&#x0096d;</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">-&#x00f27;</td>
+</tr>
+<tr>
+<td align="right">-6</td>
+<td align="right">-&#x00666;</td>
+<td align="right"></td>
+<td align="right">~&#102;</td>
+<td align="right">~&#70;</td>
+<td align="right">~&#950;</td>
+<td align="right">~&#918;</td>
+<td align="right">-&#x0096c;</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">-&#x00f26;</td>
+</tr>
+<tr>
+<td align="right">-5</td>
+<td align="right">-&#x00665;</td>
+<td align="right"></td>
+<td align="right">~&#101;</td>
+<td align="right">~&#69;</td>
+<td align="right">~&#949;</td>
+<td align="right">~&#917;</td>
+<td align="right">-&#x0096b;</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">-&#x00f25;</td>
+</tr>
+<tr>
+<td align="right">-4</td>
+<td align="right">-&#x00664;</td>
+<td align="right"></td>
+<td align="right">~&#100;</td>
+<td align="right">~&#68;</td>
+<td align="right">~&#948;</td>
+<td align="right">~&#916;</td>
+<td align="right">-&#x0096a;</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">-&#x00f24;</td>
+</tr>
+<tr>
+<td align="right">-3</td>
+<td align="right">-&#x00663;</td>
+<td align="right"></td>
+<td align="right">~&#99;</td>
+<td align="right">~&#67;</td>
+<td align="right">~&#947;</td>
+<td align="right">~&#915;</td>
+<td align="right">-&#x00969;</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">-&#x00f23;</td>
+</tr>
+<tr>
+<td align="right">-2</td>
+<td align="right">-&#x00662;</td>
+<td align="right"></td>
+<td align="right">~&#98;</td>
+<td align="right">~&#66;</td>
+<td align="right">~&#946;</td>
+<td align="right">~&#914;</td>
+<td align="right">-&#x00968;</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">-&#x00f22;</td>
+</tr>
+<tr>
+<td align="right">-1</td>
+<td align="right">-&#x00661;</td>
+<td align="right"></td>
+<td align="right">~&#97;</td>
+<td align="right">~&#65;</td>
+<td align="right">~&#945;</td>
+<td align="right">~&#913;</td>
+<td align="right">-&#x00967;</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">-&#x00f21;</td>
+</tr>
+<tr>
+<td align="right">0</td>
+<td align="right">&#x00660;</td>
+<td align="right">&#x3007;</td>
+<td align="right">&#x2610;</td>
+<td align="right">&#x2610;</td>
+<td align="right">&#x2610;</td>
+<td align="right">&#x2610;</td>
+<td align="right">&#x00966;</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">&#x00f20;</td>
+</tr>
+<tr>
+<td align="right">1</td>
+<td align="right">&#x00661;</td>
+<td align="right">&#x4e00;</td>
+<td align="right">&#97;</td>
+<td align="right">&#65;</td>
+<td align="right">&#945;</td>
+<td align="right">&#913;</td>
+<td align="right">&#x00967;</td>
+<td align="right">i</td>
+<td align="right">I</td>
+<td align="right">&#x00f21;</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td align="right">&#x00662;</td>
+<td align="right">&#x4e8c;</td>
+<td align="right">&#98;</td>
+<td align="right">&#66;</td>
+<td align="right">&#946;</td>
+<td align="right">&#914;</td>
+<td align="right">&#x00968;</td>
+<td align="right">ii</td>
+<td align="right">II</td>
+<td align="right">&#x00f22;</td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td align="right">&#x00663;</td>
+<td align="right">&#x4e09;</td>
+<td align="right">&#99;</td>
+<td align="right">&#67;</td>
+<td align="right">&#947;</td>
+<td align="right">&#915;</td>
+<td align="right">&#x00969;</td>
+<td align="right">iii</td>
+<td align="right">III</td>
+<td align="right">&#x00f23;</td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td align="right">&#x00664;</td>
+<td align="right">&#x56db;</td>
+<td align="right">&#100;</td>
+<td align="right">&#68;</td>
+<td align="right">&#948;</td>
+<td align="right">&#916;</td>
+<td align="right">&#x0096a;</td>
+<td align="right">iv</td>
+<td align="right">IV</td>
+<td align="right">&#x00f24;</td>
+</tr>
+<tr>
+<td align="right">5</td>
+<td align="right">&#x00665;</td>
+<td align="right">&#x4e94;</td>
+<td align="right">&#101;</td>
+<td align="right">&#69;</td>
+<td align="right">&#949;</td>
+<td align="right">&#917;</td>
+<td align="right">&#x0096b;</td>
+<td align="right">v</td>
+<td align="right">V</td>
+<td align="right">&#x00f25;</td>
+</tr>
+<tr>
+<td align="right">6</td>
+<td align="right">&#x00666;</td>
+<td align="right">&#x516d;</td>
+<td align="right">&#102;</td>
+<td align="right">&#70;</td>
+<td align="right">&#950;</td>
+<td align="right">&#918;</td>
+<td align="right">&#x0096c;</td>
+<td align="right">vi</td>
+<td align="right">VI</td>
+<td align="right">&#x00f26;</td>
+</tr>
+<tr>
+<td align="right">7</td>
+<td align="right">&#x00667;</td>
+<td align="right">&#x4e03;</td>
+<td align="right">&#103;</td>
+<td align="right">&#71;</td>
+<td align="right">&#951;</td>
+<td align="right">&#919;</td>
+<td align="right">&#x0096d;</td>
+<td align="right">vii</td>
+<td align="right">VII</td>
+<td align="right">&#x00f27;</td>
+</tr>
+<tr>
+<td align="right">8</td>
+<td align="right">&#x00668;</td>
+<td align="right">&#x516b;</td>
+<td align="right">&#104;</td>
+<td align="right">&#72;</td>
+<td align="right">&#952;</td>
+<td align="right">&#920;</td>
+<td align="right">&#x0096e;</td>
+<td align="right">viii</td>
+<td align="right">VIII</td>
+<td align="right">&#x00f28;</td>
+</tr>
+<tr>
+<td align="right">9</td>
+<td align="right">&#x00669;</td>
+<td align="right">&#x4e5d;</td>
+<td align="right">&#105;</td>
+<td align="right">&#73;</td>
+<td align="right">&#953;</td>
+<td align="right">&#921;</td>
+<td align="right">&#x0096f;</td>
+<td align="right">ix</td>
+<td align="right">IX</td>
+<td align="right">&#x00f29;</td>
+</tr>
+<tr>
+<td align="right">10</td>
+<td align="right">&#x00661;&#x00660;</td>
+<td align="right">&#x4e00;&#x5341;</td>
+<td align="right">&#106;</td>
+<td align="right">&#74;</td>
+<td align="right">&#954;</td>
+<td align="right">&#922;</td>
+<td align="right">&#x00967;&#x00966;</td>
+<td align="right">x</td>
+<td align="right">X</td>
+<td align="right">&#x00f21;&#x00f20;</td>
+</tr>
+<tr>
+<td align="right">11</td>
+<td align="right">&#x00661;&#x00661;</td>
+<td align="right">&#x4e00;&#x5341;&#x4e00;</td>
+<td align="right">&#107;</td>
+<td align="right">&#75;</td>
+<td align="right">&#955;</td>
+<td align="right">&#923;</td>
+<td align="right">&#x00967;&#x00967;</td>
+<td align="right">xi</td>
+<td align="right">XI</td>
+<td align="right">&#x00f21;&#x00f21;</td>
+</tr>
+<tr>
+<td align="right">12</td>
+<td align="right">&#x00661;&#x00662;</td>
+<td align="right">&#x4e00;&#x5341;&#x4e8c;</td>
+<td align="right">&#108;</td>
+<td align="right">&#76;</td>
+<td align="right">&#956;</td>
+<td align="right">&#924;</td>
+<td align="right">&#x00967;&#x00968;</td>
+<td align="right">xii</td>
+<td align="right">XII</td>
+<td align="right">&#x00f21;&#x00f22;</td>
+</tr>
+<tr>
+<td align="right">13</td>
+<td align="right">&#x00661;&#x00663;</td>
+<td align="right">&#x4e00;&#x5341;&#x4e09;</td>
+<td align="right">&#109;</td>
+<td align="right">&#77;</td>
+<td align="right">&#957;</td>
+<td align="right">&#925;</td>
+<td align="right">&#x00967;&#x00969;</td>
+<td align="right">xiii</td>
+<td align="right">XIII</td>
+<td align="right">&#x00f21;&#x00f23;</td>
+</tr>
+<tr>
+<td align="right">14</td>
+<td align="right">&#x00661;&#x00664;</td>
+<td align="right">&#x4e00;&#x5341;&#x56db;</td>
+<td align="right">&#110;</td>
+<td align="right">&#78;</td>
+<td align="right">&#958;</td>
+<td align="right">&#926;</td>
+<td align="right">&#x00967;&#x0096a;</td>
+<td align="right">xiv</td>
+<td align="right">XIV</td>
+<td align="right">&#x00f21;&#x00f24;</td>
+</tr>
+<tr>
+<td align="right">15</td>
+<td align="right">&#x00661;&#x00665;</td>
+<td align="right">&#x4e00;&#x5341;&#x4e94;</td>
+<td align="right">&#111;</td>
+<td align="right">&#79;</td>
+<td align="right">&#959;</td>
+<td align="right">&#927;</td>
+<td align="right">&#x00967;&#x0096b;</td>
+<td align="right">xv</td>
+<td align="right">XV</td>
+<td align="right">&#x00f21;&#x00f25;</td>
+</tr>
+<tr>
+<td align="right">16</td>
+<td align="right">&#x00661;&#x00666;</td>
+<td align="right">&#x4e00;&#x5341;&#x516d;</td>
+<td align="right">&#112;</td>
+<td align="right">&#80;</td>
+<td align="right">&#960;</td>
+<td align="right">&#928;</td>
+<td align="right">&#x00967;&#x0096c;</td>
+<td align="right">xvi</td>
+<td align="right">XVI</td>
+<td align="right">&#x00f21;&#x00f26;</td>
+</tr>
+<tr>
+<td align="right">17</td>
+<td align="right">&#x00661;&#x00667;</td>
+<td align="right">&#x4e00;&#x5341;&#x4e03;</td>
+<td align="right">&#113;</td>
+<td align="right">&#81;</td>
+<td align="right">&#961;</td>
+<td align="right">&#929;</td>
+<td align="right">&#x00967;&#x0096d;</td>
+<td align="right">xvii</td>
+<td align="right">XVII</td>
+<td align="right">&#x00f21;&#x00f27;</td>
+</tr>
+<tr>
+<td align="right">18</td>
+<td align="right">&#x00661;&#x00668;</td>
+<td align="right">&#x4e00;&#x5341;&#x516b;</td>
+<td align="right">&#114;</td>
+<td align="right">&#82;</td>
+<td align="right">&#963;</td>
+<td align="right">&#931;</td>
+<td align="right">&#x00967;&#x0096e;</td>
+<td align="right">xviii</td>
+<td align="right">XVIII</td>
+<td align="right">&#x00f21;&#x00f28;</td>
+</tr>
+<tr>
+<td align="right">19</td>
+<td align="right">&#x00661;&#x00669;</td>
+<td align="right">&#x4e00;&#x5341;&#x4e5d;</td>
+<td align="right">&#115;</td>
+<td align="right">&#83;</td>
+<td align="right">&#964;</td>
+<td align="right">&#932;</td>
+<td align="right">&#x00967;&#x0096f;</td>
+<td align="right">xix</td>
+<td align="right">XIX</td>
+<td align="right">&#x00f21;&#x00f29;</td>
+</tr>
+<tr>
+<td align="right">20</td>
+<td align="right">&#x00662;&#x00660;</td>
+<td align="right">&#x4e8c;&#x5341;</td>
+<td align="right">&#116;</td>
+<td align="right">&#84;</td>
+<td align="right">&#965;</td>
+<td align="right">&#933;</td>
+<td align="right">&#x00968;&#x00966;</td>
+<td align="right">xx</td>
+<td align="right">XX</td>
+<td align="right">&#x00f22;&#x00f20;</td>
+</tr>
+<tr>
+<td align="right">21</td>
+<td align="right">&#x00662;&#x00661;</td>
+<td align="right">&#x4e8c;&#x5341;&#x4e00;</td>
+<td align="right">&#117;</td>
+<td align="right">&#85;</td>
+<td align="right">&#966;</td>
+<td align="right">&#934;</td>
+<td align="right">&#x00968;&#x00967;</td>
+<td align="right">xxi</td>
+<td align="right">XXI</td>
+<td align="right">&#x00f22;&#x00f21;</td>
+</tr>
+<tr>
+<td align="right">22</td>
+<td align="right">&#x00662;&#x00662;</td>
+<td align="right">&#x4e8c;&#x5341;&#x4e8c;</td>
+<td align="right">&#118;</td>
+<td align="right">&#86;</td>
+<td align="right">&#967;</td>
+<td align="right">&#935;</td>
+<td align="right">&#x00968;&#x00968;</td>
+<td align="right">xxii</td>
+<td align="right">XXII</td>
+<td align="right">&#x00f22;&#x00f22;</td>
+</tr>
+<tr>
+<td align="right">23</td>
+<td align="right">&#x00662;&#x00663;</td>
+<td align="right">&#x4e8c;&#x5341;&#x4e09;</td>
+<td align="right">&#119;</td>
+<td align="right">&#87;</td>
+<td align="right">&#968;</td>
+<td align="right">&#936;</td>
+<td align="right">&#x00968;&#x00969;</td>
+<td align="right">xxiii</td>
+<td align="right">XXIII</td>
+<td align="right">&#x00f22;&#x00f23;</td>
+</tr>
+<tr>
+<td align="right">24</td>
+<td align="right">&#x00662;&#x00664;</td>
+<td align="right">&#x4e8c;&#x5341;&#x56db;</td>
+<td align="right">&#120;</td>
+<td align="right">&#88;</td>
+<td align="right">&#969;</td>
+<td align="right">&#937;</td>
+<td align="right">&#x00968;&#x0096a;</td>
+<td align="right">xxiv</td>
+<td align="right">XXIV</td>
+<td align="right">&#x00f22;&#x00f24;</td>
+</tr>
+</table>
+<table border="1" align="center"><caption>Xenofile numbers (square if browser render fails)</caption><tr><td>ANSI</td><td>&#x00030;</td><td>&#x00031;</td><td>&#x00032;</td><td>&#x00033;</td><td>&#x00034;</td><td>&#x00035;</td><td>&#x00036;</td><td>&#x00037;</td><td>&#x00038;</td><td>&#x00039;</td><td>&#x00031;&#x00030;</td></tr><tr><td>Arabic-Indic</td><td>&#x00660;</td><td>&#x00661;</td><td>&#x00662;</td><td>&#x00663;</td><td>&#x00664;</td><td>&#x00665;</td><td>&#x00666;</td><td>&#x00667;</td><td>&#x00668;</td><td>&#x00669;</td><td>&#x00661;&#x00660;</td></tr><tr><td>Extended Arabic-Indic</td><td>&#x006f0;</td><td>&#x006f1;</td><td>&#x006f2;</td><td>&#x006f3;</td><td>&#x006f4;</td><td>&#x006f5;</td><td>&#x006f6;</td><td>&#x006f7;</td><td>&#x006f8;</td><td>&#x006f9;</td><td>&#x006f1;&#x006f0;</td></tr><tr><td>Devanagari</td><td>&#x00966;</td><td>&#x00967;</td><td>&#x00968;</td><td>&#x00969;</td><td>&#x0096a;</td><td>&#x0096b;</td><td>&#x0096c;</td><td>&#x0096d;</td><td>&#x0096e;</td><td>&#x0096f;</td><td>&#x00967;&#x00966;</td></tr><tr><td>Bengali</td><td>&#x009e6;</td><td>&#x009e7;</td><td>&#x009e8;</td><td>&#x009e9;</td><td>&#x009ea;</td><td>&#x009eb;</td><td>&#x009ec;</td><td>&#x009ed;</td><td>&#x009ee;</td><td>&#x009ef;</td><td>&#x009e7;&#x009e6;</td></tr><tr><td>Gurmukhi</td><td>&#x00a66;</td><td>&#x00a67;</td><td>&#x00a68;</td><td>&#x00a69;</td><td>&#x00a6a;</td><td>&#x00a6b;</td><td>&#x00a6c;</td><td>&#x00a6d;</td><td>&#x00a6e;</td><td>&#x00a6f;</td><td>&#x00a67;&#x00a66;</td></tr><tr><td>Gujarati</td><td>&#x00ae6;</td><td>&#x00ae7;</td><td>&#x00ae8;</td><td>&#x00ae9;</td><td>&#x00aea;</td><td>&#x00aeb;</td><td>&#x00aec;</td><td>&#x00aed;</td><td>&#x00aee;</td><td>&#x00aef;</td><td>&#x00ae7;&#x00ae6;</td></tr><tr><td>Oriya</td><td>&#x00b66;</td><td>&#x00b67;</td><td>&#x00b68;</td><td>&#x00b69;</td><td>&#x00b6a;</td><td>&#x00b6b;</td><td>&#x00b6c;</td><td>&#x00b6d;</td><td>&#x00b6e;</td><td>&#x00b6f;</td><td>&#x00b67;&#x00b66;</td></tr><tr><td>Tamil</td><td>&#x00be6;</td><td>&#x00be7;</td><td>&#x00be8;</td><td>&#x00be9;</td><td>&#x00bea;</td><td>&#x00beb;</td><td>&#x00bec;</td><td>&#x00bed;</td><td>&#x00bee;</td><td>&#x00bef;</td><td>&#x00be7;&#x00be6;</td></tr><tr><td>Telugu</td><td>&#x00c66;</td><td>&#x00c67;</td><td>&#x00c68;</td><td>&#x00c69;</td><td>&#x00c6a;</td><td>&#x00c6b;</td><td>&#x00c6c;</td><td>&#x00c6d;</td><td>&#x00c6e;</td><td>&#x00c6f;</td><td>&#x00c67;&#x00c66;</td></tr><tr><td>Kannada</td><td>&#x00ce6;</td><td>&#x00ce7;</td><td>&#x00ce8;</td><td>&#x00ce9;</td><td>&#x00cea;</td><td>&#x00ceb;</td><td>&#x00cec;</td><td>&#x00ced;</td><td>&#x00cee;</td><td>&#x00cef;</td><td>&#x00ce7;&#x00ce6;</td></tr><tr><td>Malayalam</td><td>&#x00d66;</td><td>&#x00d67;</td><td>&#x00d68;</td><td>&#x00d69;</td><td>&#x00d6a;</td><td>&#x00d6b;</td><td>&#x00d6c;</td><td>&#x00d6d;</td><td>&#x00d6e;</td><td>&#x00d6f;</td><td>&#x00d67;&#x00d66;</td></tr><tr><td>Thai</td><td>&#x00e50;</td><td>&#x00e51;</td><td>&#x00e52;</td><td>&#x00e53;</td><td>&#x00e54;</td><td>&#x00e55;</td><td>&#x00e56;</td><td>&#x00e57;</td><td>&#x00e58;</td><td>&#x00e59;</td><td>&#x00e51;&#x00e50;</td></tr><tr><td>Lao</td><td>&#x00ed0;</td><td>&#x00ed1;</td><td>&#x00ed2;</td><td>&#x00ed3;</td><td>&#x00ed4;</td><td>&#x00ed5;</td><td>&#x00ed6;</td><td>&#x00ed7;</td><td>&#x00ed8;</td><td>&#x00ed9;</td><td>&#x00ed1;&#x00ed0;</td></tr><tr><td>Tibetan</td><td>&#x00f20;</td><td>&#x00f21;</td><td>&#x00f22;</td><td>&#x00f23;</td><td>&#x00f24;</td><td>&#x00f25;</td><td>&#x00f26;</td><td>&#x00f27;</td><td>&#x00f28;</td><td>&#x00f29;</td><td>&#x00f21;&#x00f20;</td></tr><tr><td>Myanmar</td><td>&#x01040;</td><td>&#x01041;</td><td>&#x01042;</td><td>&#x01043;</td><td>&#x01044;</td><td>&#x01045;</td><td>&#x01046;</td><td>&#x01047;</td><td>&#x01048;</td><td>&#x01049;</td><td>&#x01041;&#x01040;</td></tr><tr><td>Khmer</td><td>&#x017e0;</td><td>&#x017e1;</td><td>&#x017e2;</td><td>&#x017e3;</td><td>&#x017e4;</td><td>&#x017e5;</td><td>&#x017e6;</td><td>&#x017e7;</td><td>&#x017e8;</td><td>&#x017e9;</td><td>&#x017e1;&#x017e0;</td></tr><tr><td>Mongolian</td><td>&#x01810;</td><td>&#x01811;</td><td>&#x01812;</td><td>&#x01813;</td><td>&#x01814;</td><td>&#x01815;</td><td>&#x01816;</td><td>&#x01817;</td><td>&#x01818;</td><td>&#x01819;</td><td>&#x01811;&#x01810;</td></tr><tr><td>Fullwidth</td><td>&#x0ff10;</td><td>&#x0ff11;</td><td>&#x0ff12;</td><td>&#x0ff13;</td><td>&#x0ff14;</td><td>&#x0ff15;</td><td>&#x0ff16;</td><td>&#x0ff17;</td><td>&#x0ff18;</td><td>&#x0ff19;</td><td>&#x0ff11;&#x0ff10;</td></tr><tr><td>Mathematical Bold</td><td>&#x1d7ce;</td><td>&#x1d7cf;</td><td>&#x1d7d0;</td><td>&#x1d7d1;</td><td>&#x1d7d2;</td><td>&#x1d7d3;</td><td>&#x1d7d4;</td><td>&#x1d7d5;</td><td>&#x1d7d6;</td><td>&#x1d7d7;</td><td>&#x1d7cf;&#x1d7ce;</td></tr><tr><td>Mathematical Double-Struck</td><td>&#x1d7d8;</td><td>&#x1d7d9;</td><td>&#x1d7da;</td><td>&#x1d7db;</td><td>&#x1d7dc;</td><td>&#x1d7dd;</td><td>&#x1d7de;</td><td>&#x1d7df;</td><td>&#x1d7e0;</td><td>&#x1d7e1;</td><td>&#x1d7d9;&#x1d7d8;</td></tr><tr><td>Mathematical Sans-Serif</td><td>&#x1d7e2;</td><td>&#x1d7e3;</td><td>&#x1d7e4;</td><td>&#x1d7e5;</td><td>&#x1d7e6;</td><td>&#x1d7e7;</td><td>&#x1d7e8;</td><td>&#x1d7e9;</td><td>&#x1d7ea;</td><td>&#x1d7eb;</td><td>&#x1d7e3;&#x1d7e2;</td></tr><tr><td>Mathematical Sans-Serif Bold</td><td>&#x1d7ec;</td><td>&#x1d7ed;</td><td>&#x1d7ee;</td><td>&#x1d7ef;</td><td>&#x1d7f0;</td><td>&#x1d7f1;</td><td>&#x1d7f2;</td><td>&#x1d7f3;</td><td>&#x1d7f4;</td><td>&#x1d7f5;</td><td>&#x1d7ed;&#x1d7ec;</td></tr><tr><td>Mathematical Monospace</td><td>&#x1d7f6;</td><td>&#x1d7f7;</td><td>&#x1d7f8;</td><td>&#x1d7f9;</td><td>&#x1d7fa;</td><td>&#x1d7fb;</td><td>&#x1d7fc;</td><td>&#x1d7fd;</td><td>&#x1d7fe;</td><td>&#x1d7ff;</td><td>&#x1d7f7;&#x1d7f6;</td></tr></table>$$\boxed{Hello}$$\(\boxed{World}\)<P>_ {}
+</P><P>a 0</P><P>b 0</P><P>c 0.1.0</P><P>d 0.1.0</P><P>e 0</P><P>A 0</P><P>B 0</P><P>C 0.1.0</P><P>D 0.1.0</P><P>E 0</P><div><hr><h3>test_increment</h3>
+<h4>_</h4>
+<div>&#65;</div><div>&#65;.&#65;</div><div>&#65;.&#65;.&#65;</div><div>&#65;.&#66;</div><div>&#66;</div><h4>B</h4>
+<div>1</div><div>1.1</div><div>1.1.1</div><div>1.2</div><div>2</div><h4>C</h4>
+<div>&#913;</div><div>&#913;.I</div><div>&#913;.I.&#97;</div><div>&#913;.I.&#97;.&#x4e00;</div><div>&#913;.I.&#97;.&#x4e00;.i</div><div>&#913;.I.&#97;.&#x4e00;.ii</div><div>&#913;.I.&#97;.&#x4e8c;</div><div>&#913;.I.&#98;</div><div>&#913;.II</div><div>&#914;</div><h4>_B</h4>
+<div>&#66;.&#65;.&#65;.&#65;.&#65;</div><div>2.1.1.1.1</div><div>&#914;.I.&#97;.&#x4e00;.i</div><div>&#66;.&#65;.&#65;.&#66;</div><div>2.1.1.2</div><div>&#914;.I.&#97;.&#x4e8c;</div><hr></div>
+<hr>B
+
+<!-- X_table4 -->
+<table level="0" border="2" align="center" width="50%"> <tr>
+  <td align="right" valign="bottom">a</td>
+  <td align="center" valign="bottom">b</td>
+  <td align="left" valign="bottom">c</td>
+</tr>
+ <tr>
+  <td align="right" valign="middle">d</td>
+  <td align="center" valign="middle"><b>e</b></td>
+  <td align="left" valign="middle">f</td>
+</tr>
+ <tr>
+  <td align="right" valign="top">g</td>
+  <td align="center" valign="top">h</td>
+  <td align="left" valign="top">i</td>
+</tr>
+</table>
+
+<hr>C
+
+<!-- X_table4 -->
+<table level="0" border="1" align="right" width="50%"> <tr>
+  <td></td>
+  <td align="center" valign="middle"><b>West</b></td>
+  <td align="center" valign="middle"><b>Central</b></td>
+  <td align="center" valign="middle"><b>East</b></td>
+</tr>
+ <tr>
+  <td align="center" valign="middle"><b>North</b></td>
+  <td align="center" valign="middle">Seattle</td>
+  <td align="center" valign="middle">Madison</td>
+  <td align="center" valign="middle">Augusta</td>
+</tr>
+ <tr>
+  <td align="center" valign="middle"><b>Middle</b></td>
+  <td align="center" valign="middle">Mendocino</td>
+  <td align="center" valign="middle">Topeka</td>
+  <td align="center" valign="middle">Richmond</td>
+</tr>
+ <tr>
+  <td align="center" valign="middle"><b>South</b></td>
+  <td align="center" valign="middle">Pasadena</td>
+  <td align="center" valign="middle">Houston</td>
+  <td align="center" valign="middle">Miami</td>
+</tr>
+</table>
+
+ </body>
+</html>
